@@ -10,23 +10,16 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 16px; 
         line-height: 1.6; /* Improves readability for long text blocks */
-        max-width: 800px; /* Optional: Keeps content centered and readable on large screens */
-        margin: 0 auto;  /* Optional: Centers the content block */
+        max-width: 800px; /* Keeps content centered and readable on large screens */
+        margin: 0 auto;  /* Centers the content block */
         padding: 20px;
       }
     
       .timeline-photo {
-        /* Makes the image float to the right */
         float: right; 
-        
-        /* Adds space to the left and bottom of the image */
         margin: 0 0 15px 25px; 
-        
-        /* Sets a fixed size for consistency */
         width: 50%; /* 300px; */ 
         height: auto; 
-        
-        /* Optional: Adds a subtle border or shadow */
         border: 1px solid #ccc;
         padding: 5px;
       }
@@ -44,18 +37,26 @@
     This is a compact, chronological collection of snippets about Dave's 
     life, from his birth in 1953, to his recent passing in 2025.
     <p/>
-    It is inherently a work in progress... morphing as the content evolves,
-    growing in breadth and depth until Dave's Celebration of Life gathering
-    expected to be sometime around April-May of 2026.
+    This is nowhere near finished... still very much a work in progress,
+    morphing as the content evolves,  growing in breadth and depth until
+    Dave's Celebration of Life gathering expected to be sometime around 
+    April-May of 2026.
     <p/>
-    If you would like to contribute to this timeline, just send an email to
-    dave@holle.family, and I'll add your story.  Feel free to optionally add
-    details like
+    Meanwhile, if you'd like to add something to one of the timeline
+    items that are here, or if you've got a photo or story to add
+    as a new timeline item, send me a text, or send an email to 
+    dave@holle.family.  Include the date if you can.
+    <p/>
+    Revision History:
     <ul>
-      <li>date (approximate is fine),</li>
-      <li>photos if you have them, and</li> 
-      <li>what name you'd like in the attribution line, if any (e.g. 
-        anonymous, Phineas, Phineas Q Tumbleweed III, or...)</li>
+      <li>27 November:  Initial cut, where I put together a dozen or so
+        timeline items, just to get started.  Most of these are without
+        contemporaneous photos;  I just put in various pictures of Dave
+        as placeholders.</li>
+      <li>30 November:  I started slotting in each of the photos which
+        Sam collected from Dean's photo archive, each with dates (real
+        or imagined), in chronological order.</li>
+      <li><i>To Be Continued</i></li>
     </ul>
 
     <hr/> <div class="timeline-entry"/>
@@ -95,6 +96,24 @@
       <p>
         Naper School, then Washington Junior High, then Naperville Central High School.
         In due course, you will see year-by-year pictures of Dave growing up.
+      </p>
+    </div>
+
+    <hr/> <div class="timeline-entry"/>
+    <div class="timeline-entry">
+      <a href="images/197Q-12-QQ_DanDaveXmas.jpg" target="_blank">
+        <img src="images/197Q-12-QQ_DanDaveXmas.jpg"
+             alt="From Sam: 02 Dan and Dave Front"
+             class="timeline-photo" />
+      </a>
+      <h2>December, 197?</h2>
+      <h3>Holle Family Christmas</h3>
+      <p>
+        Dan and Dave.  I am guessing 1968-1971?
+        <p/>
+        I might write up something here about Holle Family
+        Christmas traditions... like a Christmas tree in that
+        corner, every year.
       </p>
     </div>
 
