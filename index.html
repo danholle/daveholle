@@ -23,7 +23,66 @@
         border: 1px solid #ccc;
         padding: 5px;
       }
+
+      .photo-block {
+        float: right; 
+        width: 50%; 
+        margin: 0 0 15px 25px; 
+        padding: 0; /* Remove padding here if you had it */
+      }
+
+      .photo-caption {
+        font-size: 0.9em; /* Smaller text size for the caption */
+        text-align: center;
+        padding: 5px;
+        margin-top: -10px; /* Pull the caption closer to the image */
+        border: 1px solid #ccc; /* Match the border style of the old image */
+        border-top: none; /* Make it visually connect to the image */
+      }
+
+      .photo-block img {
+        display: block; /* Removes any extra space below the image */
+        width: 100%; /* Makes the image fill the width of the .photo-block */
+        height: auto;
+        border: 1px solid #ccc; /* Optional: Keep border on image if you like */
+        padding: 5px; /* Optional: Keep padding on image if you like */
+      }
+
+      .gallery-container {
+        /* Clears any previous floats (like the text-wrapping images) */
+        clear: both; 
     
+        /* Optional: Adds space between the main text and the gallery */
+        margin-top: 20px; 
+    
+        /* Using Flexbox is the modern way to create a responsive grid */
+        display: flex;
+        flex-wrap: wrap; /* Allows items to wrap to the next row */
+        gap: 10px; /* Space between the photo items */
+        padding: 0;
+      }
+
+      .gallery-item {
+        /* Sets the width for two items per row, minus the gap */
+        width: calc(33% - 5px); /* 33% minus half the gap size (10px gap / 3 items = 5px) */
+        box-sizing: border-box; /* Ensures padding doesn't increase total width */
+        margin: 0;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: 1px solid #ccc;
+        padding: 5px;
+      }
+
+      .gallery-item .photo-caption {
+        font-size: 0.9em;
+        text-align: center;
+        padding: 5px 0;
+      }
+
       .timeline-entry::after {
         content: "";
         display: table;
@@ -41,88 +100,203 @@
     Dave's Celebration of Life gathering expected to be sometime around 
     April-May of 2026.
     <hr>
-    I started out with an initial version of the timeline, writing 
-    timeline entries mostly without contemporaneous photos (using pics
-    of Dave as placeholders), as I looked for photos from that time period. 
-    <p/>
-    Then, Dean gave me 779 pictures of Dave (!!!).  Don't worry... I'll
-    put maybe 20 of these to the Timeline as I find photos which do a
-    good job of marking Dave's life events, replacing earlier Timeline 
-    entries I already have (that used placeholder photos) as I go.
-    <p/>
-    Meanwhile, if you'd like to add something to one of the timeline
-    items that are here, or if you've got a photo or story to add
-    as a new timeline item, send me a text, or send an email to 
-    dave@holle.family.  Include the date if you can.
+    In the meantime, send any comments or photos you have to dave@holle.family,
+    and I will incorporate them into this Timeline.  If you have dates
+    associated with your material, that would be very helpful.
     <p/>
     PS If you want a closer look at any photo, just click on it for a 
     full screen version.
 
     <hr/> <div class="timeline-entry"/>
     <div class="timeline-entry">
-      <a href="images/oct2253.jpg" target="_blank">
-        <img src="images/oct2253.jpg" 
-             alt="Clip from Naperville Sun?" 
-             class="timeline-photo" />
-      </a>
+      <div class="photo-block">
+        <a href="images/oct2253.jpg" target="_blank">
+          <img src="images/oct2253.jpg" alt="Birth Announcement"/> 
+        </a>
+        <p class="photo-caption">Birth Announcement</p>
+      </div>
+      <div class="photo-block">
+        <a href="images/1954-01-XX_DadDave3mo.jpg" target="_blank">
+          <img src="images/1954-01-XX_DadDave3mo.jpg" alt="Dad and Dave (3 months old)"/>
+        </a>
+        <p class="photo-caption">Dad and Dave (at 3 months)</p>
+      </div>
+      <div class="photo-block">
+        <a href="images/1954-01-XX_MomDave3mo.jpg" target="_blank">
+          <img src="images/1954-01-XX_MomDave3mo.jpg" alt="Mom and Dave (3 months old)"/>
+        </a>
+        <p class="photo-caption">Mom and Dave (at 3 months)</p>
+      </div>
       <h2>October 22, 1953</h2>
       <h3>Dave's Best Day Ever (at that point)</h3>
       <p>
         David Henry Holle was born this day.
-        <ul>
-          <li>His first name came from David Seever, Dave's great uncle,
-            who was born Swiss but supported the US WWII war effort as a 
-            fluent French speaker / interpreter.  Our father had many animated
-            political discussions with Uncle David, but although he vehemently
-            disagreed with Uncle David's politics, their conversations moved
-            Dad to name his first born son after him.</li>
-          <li>His middle name came from Dave's maternal grandfather, 
-            Henry Martin Woaler, who came across the Atlantic from a small town
-            east of Oslo, Norway.  Henry settled first in Canada, then moved south
-            to the warm, southern environs of Illinois.</li>
-        </ul>
         <p/>
+        His first name came from David Seever, Dave's great uncle,
+        who was born Swiss in the late 1800s.  Uncle David came to the 
+        USA early in life, and supported the US World War effort(s) as a 
+        fluent French speaker / interpreter.  
+        <p/>
+        Dad and Uncle David had legendary disagreements about politics.  But
+        their conversations were based on mutual respect.  That respect moved
+        Dad to name his first born son after him.  (Lesson relevant today!)
+        <hr/>
+        Dave's middle name came from his maternal grandfather, 
+        Henry Martin Woaler, who came across the Atlantic from a small town
+        east of Oslo, Norway.  Henry settled first in Canada, then moved south
+        to the (relatively) warm, southern environs of Illinois.
+        <p/>
+        Henry Woaler passed away in a work accident in 1946, when Mom was 
+        only 18.
+        <hr/>
+        I was surprised to see (in this announcement) that Mom and Dad lived
+        in Aurora, Illinois when Dave was born.  Perhaps they were only there
+        temporarily, while Dad built our first family home in Naperville... 
+        on Webster, I think.  Later, Dad built another house on Douglas in
+        Naperville.
+        <hr/>
         Dave was the first of 4 Holle boys to be born at Copley Hospital in Aurora.
         We were all named D Holle:  Dave, Dan, Doug, Dean.  Our father (Donald) 
         thought this would be a good idea: hand-me-downs could flow freely, with
         no need to change the name tag.  This penchant for consistency took 
         other forms:  we were born in 1953, 1955, 1957, and 1959.
         <p/>
-        Then, in 1964, Barbara came along.  Obviously, she was different.  So 
-        they build Edwards Hospital in Naperville, just for her.
+        Then, in 1964, Barbara came along.  Obviously, she was different, at so
+        many levels.  They build Edwards Hospital in Naperville, just for her.
       </p>
     </div>
 
     <hr/> <div class="timeline-entry"/>
     <div class="timeline-entry">
-      <a href="images/oct2661.jpg" target="_blank">
-        <img src="images/oct2661.jpg"
-             alt="Clip from the Naperville Sun?"
-             class="timeline-photo" />
-      </a>
-      <h2>1960-1971</h2>
-      <h3>School Years</h3>
+      <h2>1954-1973</h2>
+      <h3>Dave Growing Up, Year by Year</h3>
       <p>
-        Naper School, then Washington Junior High, then Naperville Central High School.
-        In due course, you will see year-by-year pictures of Dave growing up.
-      </p>
-    </div>
-
-    <hr/> <div class="timeline-entry"/>
-    <div class="timeline-entry">
-      <a href="images/1964-09-XX_6thGrade.jpg" target="_blank">
-        <img src="images/1964-09-XX_6thGrade.jpg"
-             alt="School Photo"
-             class="timeline-photo" />
-      </a>
-      <h2>1964</h2>
-      <h3>Dave's 6th Grade School Photo</h3>
-      <p>
-        Dave was 11 when he went to Washington Junior High.
+        One picture per year, from his first birthday to his 
+        high school graduation.  Each year includes a caption with
+        more detail.
         <p/>
-        Mom made a lot of our school clothes herself.  I think
-        I recognise Mom's handiwork in Dave's shirt...
+        WARNING:  There will be a test at the end.
       </p>
+      <div class="gallery-container">
+        <div class="gallery-item">
+          <a href="images/1954-10-22_1stBday.jpg" target="_blank">
+            <img src="images/1954-10-22_1stBday.jpg" alt="1954: 1st Bday.  Mormor Woaler & Dave" />
+          </a>
+          <p class="photo-caption">1954: 1st Birthday.<br/>Mormor Woaler & Dave.</p>
+        </div>
+        <div class="gallery-item">
+          <a href="images/1955-10-22_ArtDaveLolli.jpg" target="_blank">
+            <img src="images/1955-10-22_ArtDaveLolli.jpg" alt="Uncle Art, Dave, Lollipop" />
+          </a>
+          <p class="photo-caption">1955: 2nd Birthday.<br/>With Uncle Art (Gangsta!)  & Lollipop</p>
+        </div>
+        <div class="gallery-item">
+          <a href="images/1956-04-XX_DaveYummy.jpg" target="_blank">
+            <img src="images/1956-04-XX_DaveYummy.jpg" alt="Dave (Age 3.5) at Kitchen Table" />
+          </a>
+          <p class="photo-caption">April, 1956: Dave at 3.5 Years<br/>Kitchen at 815 Douglas</p>
+        </div>
+        <div class="gallery-item">
+          <a href="images/1957-10-22_DaveDoug.jpg" target="_blank">
+            <img src="images/1957-10-22_DaveDoug.jpg" alt="4th Birthday" />
+          </a>
+          <p class="photo-caption">1957: 4th Birthday<br/>Dave and Doug (Age 7 months)</p>
+        </div>
+        <div class="gallery-item">
+          <a href="images/1958-09-XX_Kindergarten.jpg" target="_blank">
+            <img src="images/1958-09-XX_Kindergarten.jpg" alt="Hiking near Mount Rainier" />
+          </a>
+          <p class="photo-caption">1958: Kindergarten.  Age 5.<br/>Gotta love this photo.</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/1959-08-15_DanDougDave.jpg" target="_blank">
+            <img src="images/1959-08-15_DanDougDave.jpg" alt="1959 3 Stooges" />
+          </a>
+          <p class="photo-caption">August, 1959:  The 3 Stooges<br/>Dan (Age 4), Doug (2), Dave (6)</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/1959-09-XX_1stClass.jpg" target="_blank">
+            <img src="images/1959-09-XX_1stClass.jpg" alt="1st Grade" />
+          </a>
+          <p class="photo-caption">1959: Dave's 1st Grade Class.  Age 6.</p>
+        </div>
+       
+        <div class="gallery-item">
+          <a href="images/1959-10-XX_1stGrade.jpg" target="_blank">
+            <img src="images/1959-10-XX_1stGrade.jpg" alt="Dave, Mrs Beidleman's 1st Grade Class, Naper School" />
+          </a>
+          <p class="photo-caption">1959: 1st Grade (Age 6)</p>
+        </div>
+ 
+        <div class="gallery-item">
+          <a href="images/1960-09-XX_2ndGrade.jpg" target="_blank">
+            <img src="images/1960-09-XX_2ndGrade.jpg" alt="2nd Grade" />
+          </a>
+          <p class="photo-caption">1960: 2nd Grade (Age 7)</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/1960-09-XX_2ndClass.jpg" target="_blank">
+            <img src="images/1960-09-XX_2ndClass.jpg" alt="2nd Grade Class" />
+          </a>
+          <p class="photo-caption">1960: 2nd Grade Class</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/1961-07-XX_DaveAge8.jpg" target="_blank">
+            <img src="images/1961-07-XX_DaveAge8.jpg" alt="Dave (Age 8)" />
+          </a>
+          <p class="photo-caption">July 1961:  Dave (Age 8)</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/1961-09-XX_3rdGrade.jpg" target="_blank">
+            <img src="images/1961-09-XX_3rdGrade.jpg" alt="3rd Grade (Age 8)" />
+          </a>
+          <p class="photo-caption">1961:  3rd Grade (Age 8)<br/>Miss Campbell's Class</p>
+        </div>  
+
+        <div class="gallery-item">
+          <a href="images/1963-09-XX_5thGrade.jpg" target="_blank">
+            <img src="images/1963-09-XX_5thGrade.jpg" alt="5th Grade, 1963-64, Naper School" />
+          </a>
+          <p class="photo-caption">1963: 5th Grade (Age 10)<br/>Mr. Richardson's Class &bull; Naper School</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/1964-09-XX_6thGrade.jpg" target="_blank">
+            <img src="images/1964-09-XX_6thGrade.jpg" alt="6th Grade" />
+          </a>
+          <p class="photo-caption">1964: 6th Grade. Age 11.</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/1966-04-24_ConfirmMomDave.jpg" target="_blank">
+            <img src="images/1966-04-24_ConfirmMomDave.jpg" alt="April 1966: Dave's Confirmation" />
+          </a>
+          <p class="photo-caption">1966: Confirmation (Age 12.5)</p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/1966-04-24_ConfirmDaveWinkyGramW.jpg" target="_blank">
+            <img src="images/1966-04-24_ConfirmDaveWinkyGramW.jpg" alt="April 1966: Dave's Confirmation" />
+          </a>
+          <p class="photo-caption">
+            1966: Confirmation.<br/>In front of 815 Douglas.<br/>
+            Dave (Age 12.5), Winky(Dog), Grandma Woaler.
+          </p>
+        </div>
+
+        <div class="gallery-item">
+          <a href="images/1967-09-XX_10thGrade.jpg" target="_blank">
+            <img src="images/1967-09-XX_10thGrade.jpg" alt="1967: 10th Grade" />
+          </a>
+          <p class="photo-caption">1967: 10th Grade (Age 14)<br/>Sophmore at NCHS</p>
+        </div>
+
+      </div>
     </div>
 
     <hr/> <div class="timeline-entry"/>
@@ -155,27 +329,6 @@
 
     <hr/> <div class="timeline-entry"/>
     <div class="timeline-entry">
-      <a href="images/1969-XX-XX_Yearbook.jpg" target="_blank">
-        <img src="images/1969-XX-XX_Yearbook.jpg"
-             alt="From Dave's 1969 (Sophomore) High School Yearbook"
-             class="timeline-photo" />
-      </a>
-      <h2>1969</h2>
-      <h3>From Dave's 1969 (Sophomore) High School Yearbook</h3>
-      <p>
-        I'll bet that you are complaining right now that you can't see
-        the pictures... they are too small.
-        <p/>
-        Gentle reminder:  Click the pic to see it full-size.
-        <p/>
-        You may notice that there are 3 Hoffmans and 2 Hogans in this
-        row of pictures.  Triplets, and twins?  Massive incest scandal?
-        I'm as surprised as Dave appears to be.
-      </p>
-    </div>
-
-    <hr/> <div class="timeline-entry"/>
-    <div class="timeline-entry">
       <a href="images/197X-12-XX_DanDaveDougSantaBarb.jpg" target="_blank">
         <img src="images/197X-12-XX_DanDaveDougSantaBarb.jpg"
              alt="Random Family Christmas Photo"
@@ -192,15 +345,15 @@
 
     <hr/> <div class="timeline-entry"/>
     <div class="timeline-entry">
-      <a href="images/197X-12-XX_DanDaveXmas.jpg" target="_blank">
-        <img src="images/197X-12-XX_DanDaveXmas.jpg"
+      <a href="images/1969-12-XX_DanDaveXmas.jpg" target="_blank">
+        <img src="images/1969-12-XX_DanDaveXmas.jpg"
              alt="From Sam: 02 Dan and Dave Front"
              class="timeline-photo" />
       </a>
-      <h2>December, 197X</h2>
+      <h2>December, 1969</h2>
       <h3>Holle Family Christmas</h3>
       <p>
-        Dan and Dave.  I am guessing 1968-1971?
+        Dan and Dave. 
         <p/>
         I might write up something here about Holle Family
         Christmas traditions... like a Christmas tree in that
@@ -221,7 +374,10 @@
       <h2>October, 1983</h2>
       <h3>Holle Family + Mutz - Dan</h3>
       <p>
-        A family photo.  Mutz AKA Aunt Marge AKA Marge Sanderson was our next-door
+        A family photo.  Significant here, because it covers a time when
+        I don't have many photos of Dave.
+        <p/>
+        Mutz AKA Aunt Marge AKA Marge Sanderson was our next-door
         neighbour and adopted family member.  She was a reasearch biologist at
         Argonne National Labs, one of many research labs in our area as we grew
         up.  Their presence in general, and Marge in particular, added to our focus
@@ -252,7 +408,7 @@
         half a century.  Their shared interests included not only
         computing, but also photography.  (Darryl passed away in 2023,
         from health issues involving COVID and heart disease.)
-        <p/>
+        <hr/>
         The classes in computing were pretty limited back then:  the
         idea of a degree in "Computer Science" didn't exist yet.  Dave
         would register for classes, and then the classes wouldn't run
@@ -261,8 +417,8 @@
         So Dave (possibly with Darryl's help) hacked the registration
         system, and enrolled fake students so his courses would run.  These
         fake students had names like George Washington, Benjamin Franklin, 
-        Thomas Jefferson, etc.
-        <p/>
+        Thomas Jefferson, etc.  You know, your usual sorts of COD students.
+        <hr/>
         Imagine the instructor, nervously addressing a nearly empty classroom 
         on the first day, calling out names to see who was present... 
       </p>
@@ -304,29 +460,40 @@
         <p/>
         The result was predictable.  Dave's million-dollar machine printed only
         one page before gasping for breath.  My $7M machine lasted over a dozen
-        pages.
+        pages. 
         <p/>
-        Dave and I were amused and pleased.  Darryl was pleased.  He won!
-      </p>
+        Darryl's giant machine, of course,  went on and on.  Maybe it's still running..
+        <p/>
+        Dave and I were amused and pleased. For us, it was just for fun.
+        <p/>
+        For  Darryl, though, it was about winning.  And... he had WON!      
     </div>
 
     <hr/> <div class="timeline-entry"/>
     <div class="timeline-entry">
-      <a href="images/ftleowood.jpg" target="_blank">
-        <img src="images/ftleowood.jpg"
+      <a href="images/1974-01-09_BootCampClass.jpg" target="_blank">
+        <img src="images/1974-01-09_BootCampClass.jpg"
              alt="Clip from the Naperville Sun?"
              class="timeline-photo" />
       </a>
-      <h2>February, 1977</h2>
+      <a href="images/1974-01-09_BootCampDave.jpg" target="_blank">
+        <img src="images/1974-01-09_BootCampDave.jpg"
+             alt="Clip from the Naperville Sun?"
+             class="timeline-photo" />
+      </a>
+      <h2>January, 1974</h2>
       <h3>Join the Army!</h3>
       <p>
-        When our father was in his early 20s, he was working in high tech 
+        When our father was 20 years old, he was working in high tech 
         (specifically, electronics).  Then he heard the call to serve 
         his country, and joined the US Army.
         <p/>
-        When Dave about the same age, he was also working in high tech 
+        When Dave was 20 years old, he was also working in high tech 
         (in his case, computers).  Then he also heard the call to serve
         his country, and also joined the US Army.
+        <p/>
+        There are many parallels between Dave and Dad's lives, and this
+        story is just one of them.
         <p/>
         (Much more to say here.  I just got a whole bunch of pictures of
         Dave from this time period from Dean, and it gives me a lot of
@@ -378,8 +545,9 @@
              alt="Clip from the Naperville Sun?"
              class="timeline-photo" />
       </a>
-      <h2>1978-1982?</h2>
-      <h3>Terre Haute</h3>
+      <h2>1977</h2>
+      <h3>"Art" comes after "Army"... in the Dictionary, and Dave's Timeline</h3>
+      <h4>Terre Haute, New Hampshire, Cape Cod, Triton Lane, 815 Douglas...</h4>
       <p>
         After Fort Knox, Dave rolled up his sleeves and cracked on with
         an effort to become a professional cartoonist.  This is no small
@@ -395,31 +563,9 @@
         after many months of sending cartoons and getting rejected.
         <p/> 
         A very tough time for Dave.  And not a sustainable source of income.
-      </p>
-    </div>
-
-    <hr/> <div class="timeline-entry"/>
-    <div class="timeline-entry">
-      <a href="images/davmug6.jpg" target="_blank">
-        <img src="images/davmug6.jpg"
-             alt="Clip from the Naperville Sun?"
-             class="timeline-photo" />
-      </a>
-      <h2>1982-2005</h2>
-      <h3>Interlude</h3>
-      <p>
-        Dave went through a period about which I have very little information...
-        I lived thousands of miles away, and we didn't have much communication.
-        A few recollections, though:
-        <ul>
-          <li>New England.  A period of time in Cape Cod, and in New
-            Hampshire.
-          <li>Triton.  He lived with Mom for a while.
-          <li>Dad.  He lived with Dad for a long time, at 815, and at the 
-            apartment out by Portillo's
-        </ul> 
-        This period is a bit of a muddle for me... any structure to it
-        that I don't know about?  If you have more info, help me here.
+        <p/>
+        A large gallery of Dave's drawings appears here.  Maybe highlight a
+        couple of memorable ones at the top.
       </p>
     </div>
 
@@ -449,22 +595,48 @@
 
     <hr/> <div class="timeline-entry"/>
     <div class="timeline-entry">
-      <a href="images/davmug7.jpg" target="_blank">
-        <img src="images/davmug7.jpg"
+      <a href="images/20XX-XX-XX_DaveMSHV.jpg" target="_blank">
+        <img src="images/20XX-XX-XX_DaveMSHV.jpg"
+             alt="Dave in front of MSHV"
+             class="timeline-photo" />
+      </a>
+      <h2>2008(???)</h2>
+      <h3>Dave Goes To MSHV</h3>
+      <p>
+        When Dad passed away, Dave was devastated.  Dad and Dave were deeply
+        interdependent.  Dave found himself in an emotional and financial 
+        downward spiral he could not handle on his own.
+        <p/>
+        After a difficult period, Dave found refuge at the Midwest Shelter for
+        Homeless Veterans (MSHV).  His relationship with MSHV... first, as a
+        resident, then later, as an employee... helped Dave when he needed it
+        most, and provided him with a sense of purpose and a fulfilling role
+        that restored his self-confidence, and allowed him to give back support
+        to others for the rest of his life.
+        <p/>
+        Here are a few photos, gleaned from Dave's journey with MSHV.
+        <p/>
+        (to be continued)
+      </p>
+    </div>
+
+    <hr/> <div class="timeline-entry"/>
+    <div class="timeline-entry">
+      <a href="images/davmug9.jpg" target="_blank">
+        <img src="images/davmug9.jpg"
              alt="Clip from the Naperville Sun?"
              class="timeline-photo" />
       </a>
-      <h2>2005</h2>
-      <h3>Dave Goes To MSHV</h3>
+      <h2>October, 2025</h2>
+      <h3>Duelling Birthdays</h3>
       <p>
-        I am thinking that this might be 2 or 3 timeline entries.
-        <ol>
-          <li>Dave goes to MSHV as a resident</li>
-          <li>Dave transitions</li>
-          <li>Dave lives independently, as an employee of MSHV.</li>
-        </ol>
-        Robert, I'd be grateful if you could help me with this.  I'd like to
-        make it informative and supportive for current and past MSHV residents.
+        Brian's 40th birtday was on 10 October;  Dave's 72nd was on 22 October.
+        <p/>
+        Brian, Doug, and Sue went from Minocqua, Wisconsin, to ???, Indiana, to celebrate
+        Brian's birthday;  and managed to catch up with Dave in Wheaton along the way.
+        <p/>
+        Everyone was in good spirits, and (apparently) in good health.  While Dave had
+        a few lingering issues, they appeared to be on the mend.
       </p>
     </div>
 
@@ -478,18 +650,6 @@
       <h2>Late November, 2025</h2>
       <h3>Ending Days</h3>
       <p>
-        In early October, Dave met up with family.  He was looking good;  in
-        good spirits.  He was undergoing treatment for some serious medical
-        conditions, such as
-        <ul>
-          <li>Leukemia, with chemotherapy (which he did not mention at the time)</li>
-          <li>Sepsis associated with ongoing lymphoma-related issues, ongoing 
-            for many years</li>
-          <li>Other things, like UTI</li>
-        </ul>
-        The infection (sepsis) issues had subsided to the extent where his doctor(s)
-        had been optimistic enough to cancel upcoming medical appointments.
-      </p>
       A month and a half later, his condition changed for the worse.
       <ul>
         <li>Thursday, 20 November:  Dave did not show up for work, and did not call 
@@ -508,6 +668,24 @@
           indications of recovery presented themselves.</li>
         <li>On xx November, Dave passed away peacefully.</li>
       </ul>
+      <p/>
+      <h3>What happened?</h3>
+      From what I've heard, the most likely final pathway was:
+      <ul>
+        <li>Dave's leukemia, and ongoing chemotherapy, led to
+        <li>profound neutropenia, leading to
+        <li>Pseudomonas UTI/bacteremia, leading to
+        <li>overwhelming sepsis + septic emboli and/or mycotic 
+          aneurysm in the brain, leading to</li>
+        <li>massive ischemic and/or hemorrhagic stroke that 
+          developed after the first scan.</li>
+      </ul>
+      Pseudomonas is one of the organisms doctors fear most in 
+      this exact patient population for precisely this reason. 
+      Even with the very best antibiotics and ICU care, once it 
+      reaches that stage the outcome is often unsurvivable.
+      <p/>
+      Goodbye, big brother...
     </div>
 
     <hr/> <div class="timeline-entry"/>
